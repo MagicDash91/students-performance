@@ -13,7 +13,7 @@ st.write('Students Performance Dataset')
 grid_table = AgGrid(df1)
 st.dataframe(grid_table)
 
-series = grid_table['race/ethnicity'].value_counts()
+series = df1['race/ethnicity'].value_counts()
 df_race = pd.DataFrame(series)
 df_race = df_race.reset_index()  
 df_race.columns = ['race/ethnicity', 'Total']
